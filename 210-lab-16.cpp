@@ -18,14 +18,12 @@ public:
 		green = 0;
 		blue = 0;
 	}
-
 	// Full parameter constructor
 	Color(int r, int g, int b) {
 		red = r;
 		green = g;
 		blue = b;
 	};
-
 	// Partial parameter constructor
 	Color(int r) {
 		red = r;
@@ -50,23 +48,23 @@ public:
 };
 
 int main() {
-	// TODO: Instantiate a variety of Color objects using a variety types of constructors
+	// Instantiating an object using the default constructor
 	Color orange;
+	// Updating the attributes' values so that they're no longer the default values
 	orange.setRed(255);
 	orange.setGreen(128);
-	orange.setBlue(0);
+	orange.setBlue(10);
 	orange.print();
 
-	Color yellow;
-	yellow.setRed(255);
+	// Instantiating an object using the Color class's partial parameter constructor
+	Color yellow(255);
+	// Updating the values of the attributes that currently have default values
 	yellow.setGreen(255);
-	yellow.setBlue(0);
+	yellow.setBlue(10);
 	yellow.print();
 
-	Color purple;
-	purple.setRed(127);
-	purple.setGreen(0);
-	purple.setBlue(255);
+	// Instantiating an object using the Color class's full parameter constructor
+	Color purple(127,10,255);
 	purple.print();
 
 	return 0;
