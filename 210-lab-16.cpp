@@ -6,12 +6,32 @@ using namespace std;
 
 const int WIDTH = 10;
 
-// TODO: Create a default constructor, a parameter constructor, and at least one partial constructor
 class Color {
 	int red;
 	int green;
 	int blue;
+
 public:
+	// Default constructor
+	Color() {
+		red = 0;
+		green = 0;
+		blue = 0;
+	}
+
+	// Full parameter constructor
+	Color(int r, int g, int b) {
+		red = r;
+		green = g;
+		blue = b;
+	};
+
+	// Partial parameter constructor
+	Color(int r) {
+		red = r;
+		green = 0;
+		blue = 0;
+	}
 	// using const keyword because these functions should not change any data
 	int getRed() const { return red; }
 	int getGreen() const { return green; }
@@ -20,6 +40,7 @@ public:
 	void setRed(int red) { this->red = red; }
 	void setGreen(int green) { this->green = green; }
 	void setBlue(int blue) { this->blue = blue; }
+
 	void print() {
 		cout << setw(WIDTH) << "COLOR " << "VALUE" << endl;
 		cout << setw(WIDTH) << "Red " << red << endl;
